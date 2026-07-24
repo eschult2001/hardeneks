@@ -1,3 +1,9 @@
+## v1.1.1 (2026-07-24)
+
+### Fix
+
+- **pod_security.py**: Minor bug fix to capture catch when container security is None
+
 ## v1.1.0 (2026-03-23)
 
 ### Feat

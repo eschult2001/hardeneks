@@ -127,8 +127,8 @@ class disallow_privilege_escalation(Rule):
         for pod in namespaced_resources.pods:
             for container in pod.spec.containers:
                 if (
-                    container.security_context
-                    and container.security_context.allow_privilege_escalation
+                    container.security_context is None
+                    or container.security_context.allow_privilege_escalation is not False
                 ):
                     offenders.append(pod.metadata.name)
                     break
